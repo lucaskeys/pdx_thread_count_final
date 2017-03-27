@@ -1,0 +1,22 @@
+<div class="container">
+  <% if @stores.any? %>
+    <% @stores.each do |store| %>
+      <div class="row store-overview">
+        <div class="store_background"></div>
+        <div class="col-md-3">
+          <h3><%= store.store_name %></h3>
+        </div>
+        <div class="col-md-8">
+          <p><%= store.about %></p>
+          <%= link_to "Visit", store_path(store), class: "btn btn-xs btn-default" %>
+        </div>
+      </div>
+    <% end %>
+    <% else %>
+    <div class="row store-unavailable">
+      <div class="col-md-12 text-center">
+        <p>Coming Soon..</p>
+      </div>
+    </div>
+  <% end %>
+</div>

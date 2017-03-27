@@ -1,0 +1,4 @@
+<button class="btn btn-default"><%= link_to "Add New Designer", new_designer_path %></button>
+  <% @designers.each do |designer| %>
+    <li><%= link_to designer.designer_name, designer_path(designer) %></li>
+  <% end %>

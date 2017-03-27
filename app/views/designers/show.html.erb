@@ -1,0 +1,10 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-sm-8">
+      <button class="btn btn-default"><%= link_to "Edit Designer Profile", edit_designer_path(@designer) %></button>
+      <h1><%= @designer.designer_name %></h1>
+      <p><%= image_tag @designer.designer_image.url(:large), class: "designer-img" %></p>
+    </div>
+  </div>
+</div>
